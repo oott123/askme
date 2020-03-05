@@ -1,0 +1,38 @@
+.ask .recent-list .item {
+  padding: 0.3em;
+  border-radius:  0.3em;
+}
+.ask .recent-list .item .action {
+  margin-top: 0.3em;
+}
+.ask .recent-list .item:hover {
+  background: #f3f3f3;
+}
+.ask .recent-list .item .content {
+  line-height: 1.7;
+}
+.ask .recent-list .item .meta {
+  font-size: 0.95em;
+}
+.ask .recent-list .answer-item-content {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 5em;
+}
+.ask .answer-view .meta {
+  text-align: right;
+}
+.ask .answer-view .question {
+  padding-right: 3em;
+}
+.ask .answer-view .answer {
+  padding-left: 3em;
+}
+.ask .copyright {
+  text-align: center;
+}
+.ask-padding {
+  padding-bottom: 2em;
+}
