@@ -24,5 +24,15 @@
   </div>
 </div>
 
+<?php if(is_admin()): ?>
+<p></p>
+<form class="ui form" method="post" action="answerme.php">
+  <input type="hidden" name="id" value="<?=htmlspecialchars($question['id'])?>">
+  <input type="hidden" name="action" value="delete">
+  <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($_COOKIE[ASK_CSRF_TOKEN])?>">
+  <button name="submit" type="submit" class="ui fluid negative submit button">删除</button>
+</form>
+<?php endif;?>
+
 <?php include 'views/partials/ask.php'; ?>
 <?php include 'views/partials/answers.php'; ?>

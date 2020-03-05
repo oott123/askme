@@ -36,6 +36,11 @@
     }
   }
 
+  function logout() {
+    setcookie('askme_token', '', 0);
+    setcookie('askme_token_expire', '', 0);
+  }
+
   function get_token($expire_at) {
     return sha1(AskMeConfig::$site_secret . $expire_at . AskMeConfig::$admin_password);
   }

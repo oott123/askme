@@ -7,17 +7,27 @@
   }
 
   if (check_submit()) {
-    $question = $_POST['question'];
-    $answer = $_POST['answer'];
-    $asked_at = $_POST['asked_at'];
-    $answered_at = time();
-    $id = intval($_POST['id']);
-
-    if ($_POST['delete'] === 'yes') {
-      AskMeDB::$instance->answer($id);
-    } else if (!empty($answer)) {
-      AskMeDB::$instance->insert($question, $answer, $asked_at, $answered_at);
-      AskMeDB::$instance->answer($id);
+    if ($_POST['action'] === 'delete') {
+      AskMeDB::$instance->delete($_POST['id']);
+      header('Location: all.php');
+      die();
+    } else if ($_POST['action'] === 'answer') {
+      $question = $_POST['question'];
+      $answer = $_POST['answer'];
+      $asked_at = $_POST['asked_at'];
+      $answered_at = time();
+      $id = intval($_POST['id']);
+  
+      if ($_POST['delete'] === 'yes') {
+        AskMeDB::$instance->answer($id);
+      } else if (!empty($answer)) {
+        AskMeDB::$instance->insert($question, $answer, $asked_at, $answered_at);
+        AskMeDB::$instance->answer($id);
+      }
+    } else if ($_POST['action'] === 'logout') {
+      logout();
+      header('Location: login.php');
+      die();
     }
   }
 

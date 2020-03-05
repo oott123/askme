@@ -14,3 +14,10 @@
   </div>
 <?php endforeach; ?>
 </div>
+
+<p></p>
+<form class="ui form" method="post" action="answerme.php">
+  <input type="hidden" name="action" value="logout">
+  <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($_COOKIE[ASK_CSRF_TOKEN])?>">
+  <button name="submit" type="submit" class="ui fluid submit button">登出</button>
+</form>

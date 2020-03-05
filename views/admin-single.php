@@ -15,6 +15,7 @@
     </div>
   </div>
   <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($_COOKIE[ASK_CSRF_TOKEN])?>">
+  <input type="hidden" name="action" value="answer">
   <input type="hidden" name="asked_at" value="<?=htmlspecialchars($question['asked_at']);?>">
   <input type="hidden" name="id" value="<?=htmlspecialchars($question['id']);?>">
   <button name="submit" type="submit" class="ui fluid black submit button">提交</button>

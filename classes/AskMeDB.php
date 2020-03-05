@@ -22,6 +22,11 @@
       $stmt->execute(array(time(), $inbox_id));
     }
 
+    public function delete($id) {
+      $stmt = $this->pdo->prepare('DELETE FROM questions WHERE id = ?');
+      $stmt->execute(array($id));
+    }
+
     public function insert($question, $answer, $asked_at, $answered_at) {
       $stmt = $this->pdo->prepare('INSERT INTO questions (question, answer, asked_at, answered_at) VALUES (?, ?, ?, ?)');
       $stmt->execute(array($question, $answer, $asked_at, $answered_at));
