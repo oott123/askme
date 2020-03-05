@@ -2,9 +2,11 @@
   require_once 'bootstrap.php';
 
   if (check_submit()) {
+    AskMeDB::$instance->ask($_POST['text']);
+  
     $view_layout = 'message.php';
     $message_title = '提交成功';
-    $message_body = '你的问题我已经收到了，回复之后我会在微博或者推特上发布！<br>你也可以常来看看我的提问箱，看看有没有被回复~';
+    $message_body = AskMeConfig::$submit_success;
     include 'views/layout.php';
   } else {
     $view_layout = 'home.php';
