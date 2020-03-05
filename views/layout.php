@@ -21,7 +21,7 @@
         查看所有问题
       </a>
     </div>
-    <?php include $view_layout; ?>
+    <?php include 'views/' . $view_layout; ?>
     <div class="ui horizontal divider">
       <i class="pink heart icon"></i>
     </div>
@@ -30,5 +30,6 @@
   <div class="ask-padding"></div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+  <?=isset($footer_js) ? $footer_js : '';?>
 </body>
 </html>

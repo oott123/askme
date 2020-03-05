@@ -1,8 +1,16 @@
 <?php
-  define('IS_ASK', true);
+  require_once 'bootstrap.php';
 
-  $site_title = '三尾的提问箱';
-  $site_avatar = 'http://popiask-client-file.oss-cn-hangzhou.aliyuncs.com/avatar/2020-02-22/1754a782218b60caa1d313a38ee86e08492895.jpg';
+  $offset = empty($_GET['offset']) ? 2147483646 : intval($_GET['offset']);
+  $partial = !empty($_GET['partial']);
+
   $view_layout = 'list.php';
+  $footer_js = '<script src="scripts/loadmore.js"></script>';
   $view_all = true;
-  include 'views/layout.php';
+  $question_list = AskMeDB::$instance->recent(AskMeConfig::$list_answers, $offset);
+
+  if ($partial) {
+    include 'views/partials/answer-list.php';
+  } else {
+    include 'views/layout.php';
+  }
