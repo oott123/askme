@@ -1,3 +1,4 @@
+<?php defined('IS_ASK') || die('Direct access not allowed.'); ?>
 <a name="ask"></a>
 <h2 class="ui header">向我提问！</h2>
 <div class="ui form">

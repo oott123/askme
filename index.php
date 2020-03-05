@@ -1,7 +1,11 @@
 <?php
-  define('IS_ASK', true);
+  require_once 'bootstrap.php';
 
-  $site_title = '三尾的提问箱';
-  $site_avatar = 'http://popiask-client-file.oss-cn-hangzhou.aliyuncs.com/avatar/2020-02-22/1754a782218b60caa1d313a38ee86e08492895.jpg';
+  // AskMeDB::$instance->ask('你好');
+  // AskMeDB::$instance->answer(1, '好的');
+  // var_dump();
+
   $view_layout = 'home.php';
+  $view_all = false;
+  $question_list = AskMeDB::$instance->recent(AskMeConfig::$recent_answers);
   include 'views/layout.php';

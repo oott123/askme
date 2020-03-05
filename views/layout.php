@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?=$site_title;?></title>
+  <title><?=AskMeConfig::$site_title;?></title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="styles/site.css">
 </head>
@@ -12,10 +12,10 @@
   <div class="ui text container ask">
     <div class="ui text menu">
       <div class="item">
-        <img src="<?=htmlspecialchars($site_avatar);?>" style="height: 2.5em;">
+        <img src="<?=htmlspecialchars(AskMeConfig::$site_avatar);?>" style="height: 2.5em;">
       </div>
       <a class="browse item" href=".">
-        <?=$site_title;?>
+      <?=AskMeConfig::$site_title;?>
       </a>
       <a class="browse item" href="all.php">
         查看所有问题
