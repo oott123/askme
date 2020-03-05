@@ -30,6 +30,6 @@
   <div class="ask-padding"></div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-  <?=isset($footer_js) ? $footer_js : '';?>
+  <script src="scripts/site.js"></script>
 </body>
 </html>

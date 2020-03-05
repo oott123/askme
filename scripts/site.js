@@ -18,6 +18,11 @@
     .catch(function () {
       btn.removeClass('loading');
       btn.text('加载失败，点击重试');
-    })
+    });
+  });
+
+  $('#ask-form').on('submit', function () {
+    $('#js_challenge').val(navigator.appCodeName);
+    $('#domain').val('');
   });
 })();
