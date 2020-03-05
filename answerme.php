@@ -1,6 +1,11 @@
 <?php
   require_once 'bootstrap.php';
 
+  if (!is_admin()) {
+    header('Location: login.php');
+    die();
+  }
+
   if (check_submit()) {
     $question = $_POST['question'];
     $answer = $_POST['answer'];

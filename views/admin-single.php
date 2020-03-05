@@ -1,6 +1,6 @@
 <?php defined('IS_ASK') || die('Direct access not allowed.'); ?>
 <h2>回答问题</h2>
-<form class="ui form" id="ask-form" method="post" action="answerme.php">
+<form class="ui form" method="post" action="answerme.php">
   <div class="field">
     <textarea name="question"><?=htmlspecialchars($question['question']);?></textarea>
   </div>
