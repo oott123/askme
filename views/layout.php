@@ -26,8 +26,8 @@
       <i class="pink heart icon"></i>
     </div>
     <p class="copyright">Powered by <a href="https://github.com/oott123/askme" target="_blank">AskMe!</a> | <a href="login.php">Login</a></p>
+    <div class="ask-padding"></div>
   </div>
-  <div class="ask-padding"></div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
   <script src="scripts/site.js"></script>

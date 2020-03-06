@@ -39,6 +39,6 @@
 .ask .copyright {
   text-align: center;
 }
-.ask-padding {
-  padding-bottom: 2em;
+.ask .ask-padding {
+  height: 2em;
 }
