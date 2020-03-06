@@ -43,10 +43,10 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
-  <script src="scripts/site.js"></script>
+  <script src="<?=static_url('scripts/site.js');?>"></script>
 <?php if(is_admin()):?>
   <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.js" integrity="sha256-Tw0/gX6aFDMese6GHQJFL/ZjF+f7edyF9okFVY/B9oU=" crossorigin="anonymous"></script>
-  <script src="scripts/admin.js"></script>
+  <script src="<?=static_url('scripts/admin.js');?>"></script>
 <?php endif;?>
 </body>
 </html>

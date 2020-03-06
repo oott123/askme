@@ -59,3 +59,7 @@
     }
     return $lang->translate($locale, $message);
   }
+
+  function static_url($filename) {
+    return $filename . '?v=' . filemtime($filename);
+  }
