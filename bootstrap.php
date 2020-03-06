@@ -6,6 +6,10 @@
 
   defined('IS_ASK') || die('Direct access not allowed.');
 
+  if (empty(AskMeConfig::$admin_password) || empty(AskMeConfig::$site_secret)) {
+    die('No admin password or site secret given! Edit your config.php.');
+  }
+
   if (!isset($_COOKIE[ASK_CSRF_TOKEN])) {
     setcookie(ASK_CSRF_TOKEN, uniqid(true));
   }
