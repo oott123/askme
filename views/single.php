@@ -24,7 +24,7 @@
   </div>
   <p></p>
   <p class="img-message">
-    问题来自 <a href="."><?=AskMeConfig::$site_title;?></a>。<br>
+    <?=_('问题来自');?> <a href="."><?=AskMeConfig::$site_title;?></a><br>
     <span><?=AskMeConfig::$site_advertise;?></span>
   </p>
 </div>
@@ -37,15 +37,15 @@
   <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($_COOKIE[ASK_CSRF_TOKEN])?>">
   <div class="ui grid">
     <div class="eight wide column">
-      <button id="get-screenshot" type="button" class="ui fluid button">生成图片</a>
+      <button id="get-screenshot" type="button" class="ui fluid button"><?=_('生成图片');?></a>
     </div>
     <div class="eight wide column">
 <?php if($question['deleted_at']): ?>
   <input type="hidden" name="action" value="recover">
-  <button name="submit" type="submit" class="ui fluid positive submit button">恢复</button>
+  <button name="submit" type="submit" class="ui fluid positive submit button"><?=_('恢复');?></button>
 <?php else: ?>
   <input type="hidden" name="action" value="delete">
-  <button name="submit" type="submit" class="ui fluid negative submit button">删除</button>
+  <button name="submit" type="submit" class="ui fluid negative submit button"><?=_('删除');?></button>
 <?php endif; ?>
     </div>
   </div>

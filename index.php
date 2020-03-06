@@ -5,7 +5,7 @@
     AskMeDB::$instance->ask($_POST['text']);
   
     $view_layout = 'message.php';
-    $message_title = '提交成功';
+    $message_title = _('提交成功');
     $message_body = AskMeConfig::$submit_success;
     include 'views/layout.php';
   } else {

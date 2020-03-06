@@ -12,8 +12,7 @@
       link.download = Date.now() + '.jpg';
       link.href = dataUrl;
       link.click();
-      link.innerText = '下载图片';
-      $('.img-view').append(link);
+      $('.img-view').append($('<img>').attr('src', dataUrl));
     })
     .finally(function () {
       $btn.removeClass('loading');

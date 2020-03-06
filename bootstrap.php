@@ -48,3 +48,9 @@
   function get_token($expire_at) {
     return sha1(AskMeConfig::$site_secret . $expire_at . AskMeConfig::$admin_password);
   }
+
+  if (!function_exists('_')) {
+    function _($message) {
+      return $message;
+    }
+  }

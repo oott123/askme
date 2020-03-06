@@ -18,7 +18,7 @@
       <?=AskMeConfig::$site_title;?>
       </a>
       <a class="browse item" href="all.php">
-        查看所有问题
+      <?=_('查看所有问题');?>
       </a>
     </div>
     <?php include 'views/' . $view_layout; ?>
