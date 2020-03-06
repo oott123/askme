@@ -15,6 +15,13 @@
     setcookie(ASK_CSRF_TOKEN, uniqid(true));
   }
 
+  header('X-Frame-Options: deny');
+  header('X-Content-Type-Options: nosniff');
+  header('Referrer-Policy: same-origin');
+  header("Feature-Policy: document-domain 'none', sync-xhr 'none'");
+  header('X-XSS-Protection: 1; mode=block');
+  header('Cache-Control: no-cache');
+
   AskMeDB::$instance = new AskMeDB();
 
   function is_admin() {
