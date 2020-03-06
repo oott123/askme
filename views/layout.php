@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?=AskMeConfig::$site_title;?></title>
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css" integrity="sha256-bsldvM021p5UCjvLS1wzZRXoL0B0bR5TpK1PxjWQpJY=" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="styles/site.css">
 </head>
 <body>
@@ -39,5 +39,9 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
   <script src="scripts/site.js"></script>
+<?php if(is_admin()):?>
+  <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.js" integrity="sha256-Tw0/gX6aFDMese6GHQJFL/ZjF+f7edyF9okFVY/B9oU=" crossorigin="anonymous"></script>
+  <script src="scripts/admin.js"></script>
+<?php endif;?>
 </body>
 </html>

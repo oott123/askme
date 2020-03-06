@@ -12,7 +12,7 @@
 
   $alldata = array();
 
-  $url = 'https://apiv3.popiask.cn/unuser/getQuestionFromUser/' . $username . '?pageSize=1';
+  $url = 'https://apiv3.popiask.cn/unuser/getQuestionFromUser/' . $username . '?pageSize=20';
   while ($url) {
     $json = file_get_contents($url);
     $arr = json_decode($json, true);

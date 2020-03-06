@@ -36,6 +36,18 @@
 .ask .answer-view .answer {
   padding-left: 3em;
 }
+.ask .answer-view .img-message {
+  display: none;
+  text-align: center;
+}
+.ask .answer-view.screenshot {
+  width: 400px;
+  padding: 1em;
+  background: #fff;
+}
+.ask .answer-view.screenshot .img-message {
+  display: block;
+}
 .ask .copyright {
   text-align: center;
 }
