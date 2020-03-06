@@ -6,7 +6,8 @@
 
   $view_layout = 'list.php';
   $view_all = true;
-  $question_list = AskMeDB::$instance->recent(AskMeConfig::$list_answers, $offset);
+  $deleted_after = is_admin() ? time() : 0;
+  $question_list = AskMeDB::$instance->recent(AskMeConfig::$list_answers, $offset, $deleted_after);
 
   if ($partial) {
     include 'views/partials/answer-list.php';

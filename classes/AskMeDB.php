@@ -35,9 +35,9 @@
       $stmt->execute(array($question, $answer, $asked_at, $answered_at));
     }
 
-    public function recent($num, $id = 2147483646) {
-      $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE id < ? AND deleted_at <= 0 ORDER BY answered_at DESC LIMIT ?');
-      $stmt->execute(array($id, $num));
+    public function recent($num, $id = 2147483646, $deleted_after = 0) {
+      $stmt = $this->pdo->prepare('SELECT * FROM questions WHERE id < ? AND deleted_at <= ? ORDER BY answered_at DESC LIMIT ?');
+      $stmt->execute(array($id, $deleted_after, $num));
       return $stmt->fetchAll();
     }
 

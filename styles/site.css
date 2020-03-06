@@ -5,6 +5,9 @@
   padding: 0.3em;
   border-radius:  0.3em;
 }
+.ask .recent-list .item.deleted {
+  opacity: 0.5;
+}
 .ask .recent-list .item .action {
   margin-top: 0.3em;
 }
