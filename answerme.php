@@ -8,8 +8,14 @@
 
   if (check_submit()) {
     if ($_POST['action'] === 'delete') {
-      AskMeDB::$instance->delete($_POST['id']);
-      header('Location: all.php');
+      $id = intval($_POST['id']);
+      AskMeDB::$instance->delete($id);
+      header('Location: view.php?id=' . $id);
+      die();
+    } else if ($_POST['action'] === 'recover') {
+      $id = intval($_POST['id']);
+      AskMeDB::$instance->delete($id, 0);
+      header('Location: view.php?id=' . $id);
       die();
     } else if ($_POST['action'] === 'answer') {
       $question = $_POST['question'];

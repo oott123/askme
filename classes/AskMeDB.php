@@ -22,9 +22,12 @@
       $stmt->execute(array(time(), $inbox_id));
     }
 
-    public function delete($id) {
+    public function delete($id, $deleted_at = null) {
+      if ($deleted_at === NULL) {
+        $deleted_at = time();
+      }
       $stmt = $this->pdo->prepare('UPDATE questions SET deleted_at = ? WHERE id = ?');
-      $stmt->execute(array(time(), $id));
+      $stmt->execute(array($deleted_at, $id));
     }
 
     public function insert($question, $answer, $asked_at, $answered_at) {

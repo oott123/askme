@@ -28,9 +28,14 @@
 <p></p>
 <form class="ui form" method="post" action="answerme.php">
   <input type="hidden" name="id" value="<?=htmlspecialchars($question['id'])?>">
-  <input type="hidden" name="action" value="delete">
   <input type="hidden" name="csrf_token" value="<?=htmlspecialchars($_COOKIE[ASK_CSRF_TOKEN])?>">
+<?php if($question['deleted_at']): ?>
+  <input type="hidden" name="action" value="recover">
+  <button name="submit" type="submit" class="ui fluid positive submit button">恢复</button>
+<?php else: ?>
+  <input type="hidden" name="action" value="delete">
   <button name="submit" type="submit" class="ui fluid negative submit button">删除</button>
+<?php endif; ?>
 </form>
 <?php endif;?>
 

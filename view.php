@@ -7,7 +7,7 @@
   $view_all = false;
   $question = AskMeDB::$instance->get($id);
 
-  if (empty($question) || $question['deleted_at'] > 0) {
+  if (empty($question) || ($question['deleted_at'] > 0 && !is_admin())) {
     $question = null;
     $view_layout = 'message.php';
     $message_title = '找不到回答';
