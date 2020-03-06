@@ -3,6 +3,7 @@
   define('ASK_CSRF_TOKEN', 'askme_csrf_token');
   require_once ASK_BASEDIR . '/config.php';
   require_once ASK_BASEDIR . '/classes/AskMeDB.php';
+  require_once ASK_BASEDIR . '/classes/MoParser.php';
 
   defined('IS_ASK') || die('Direct access not allowed.');
 
@@ -49,8 +50,12 @@
     return sha1(AskMeConfig::$site_secret . $expire_at . AskMeConfig::$admin_password);
   }
 
-  if (!function_exists('_')) {
-    function _($message) {
-      return $message;
+  function __($message) {
+    static $lang;
+    $locale = AskMeConfig::$site_locale;
+    if ($lang === NULL) {
+      $lang = new MoParser();
+      $lang->loadTranslationData('locales/'. $locale . '.mo', $locale . '');
     }
+    return $lang->translate($locale, $message);
   }

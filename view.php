@@ -10,8 +10,8 @@
   if (empty($question) || ($question['deleted_at'] > 0 && !is_admin())) {
     $question = null;
     $view_layout = 'message.php';
-    $message_title = _('找不到回答');
-    $message_body = _('回答不存在，或者问题已经被删除了 :(');
+    $message_title = __('找不到回答');
+    $message_body = __('回答不存在，或者问题已经被删除了 :(');
     header('HTTP/1.1 404 Not Found');
   } else {
     $question_list = AskMeDB::$instance->recent(AskMeConfig::$recent_answers, $id);
