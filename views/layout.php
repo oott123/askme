@@ -20,6 +20,11 @@
       <a class="browse item" href="all.php">
       <?=__('查看所有问题');?>
       </a>
+<?php foreach(AskMeConfig::$site_links as $link):?>
+      <a class="browse item" href="<?=htmlspecialchars($link['href']);?>" target="_blank" rel="noopener noreferrer">
+        <?=$link['title'];?>
+      </a>
+<?php endforeach;?>
     </div>
     <?php include 'views/' . $view_layout; ?>
     <div class="ui horizontal divider">
