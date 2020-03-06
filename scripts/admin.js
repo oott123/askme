@@ -6,7 +6,6 @@
     $btn.addClass('loading');
     $('.img-view').html('');
 
-
     requestAnimationFrame(function () {
       var scale = 3;
       var height = $dom[0].offsetHeight;
