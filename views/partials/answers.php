@@ -1,9 +1,19 @@
 <?php defined('IS_ASK') || die('Direct access not allowed.'); ?>
 <a name="answers"></a>
 <h2 class="ui header">以前回答过的问题</h2>
+<?php if(empty($question_list)):?>
+  <div class="ui positive message">
+<?php if(isset($question)):?>
+    <p>没有更早的问题了。</p>
+<?php else:?>
+    <p>还没有回答过问题。</p>
+<?php endif;?>
+  </div>
+<?php else:?>
 <div class="ui middle aligned divided list recent-list">
 <?php include 'views/partials/answer-list.php'; ?>
 </div>
+<?php endif;?>
 
 <?php if($view_all): ?>
   <div class="ui container">

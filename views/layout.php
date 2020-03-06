@@ -25,7 +25,7 @@
     <div class="ui horizontal divider">
       <i class="pink heart icon"></i>
     </div>
-    <p class="copyright">Powered by <a>AskMe!</a> | <a href="login.php">后台</a></p>
+    <p class="copyright">Powered by <a href="https://github.com/oott123/askme" target="_blank">AskMe!</a> | <a href="login.php">Login</a></p>
   </div>
   <div class="ask-padding"></div>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
