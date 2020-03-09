@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?=AskMeConfig::$site_title;?></title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.css" integrity="sha256-bsldvM021p5UCjvLS1wzZRXoL0B0bR5TpK1PxjWQpJY=" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="styles/site.css">
+  <link rel="stylesheet" type="text/css" href="<?=static_url('styles/site.css');?>">
 </head>
 <body>
   <div class="ui text container ask">
@@ -41,8 +41,8 @@
      </p>
     <div class="ask-padding"></div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.4/dist/semantic.min.js" integrity="sha256-WTQFsw74IXBZWoXA8AnKpma22rW8qdBQvbiMgDEpKew=" crossorigin="anonymous"></script>
   <script src="<?=static_url('scripts/site.js');?>"></script>
 <?php if(is_admin()):?>
   <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/src/dom-to-image.js" integrity="sha256-Tw0/gX6aFDMese6GHQJFL/ZjF+f7edyF9okFVY/B9oU=" crossorigin="anonymous"></script>
